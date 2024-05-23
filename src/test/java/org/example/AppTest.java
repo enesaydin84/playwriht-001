@@ -39,7 +39,7 @@ public class AppTest
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
             Page page = browser.newPage();
-            page.navigate("https://stb.turkcellbulut.com/");
+            page.navigate("https://turkcellbulut.com/");
             page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Giriş Yapın")).click();
             page.getByPlaceholder("Müşteri numaranızı ya da e-posta adresinizi girin").fill("23350412");
             page.getByPlaceholder("Şifrenizi Girin").fill("dssdds");
