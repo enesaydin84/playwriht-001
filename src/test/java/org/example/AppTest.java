@@ -39,12 +39,12 @@ public class AppTest
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
             Page page = browser.newPage();
-            page.navigate("https://turkcellbulut.com/");
-            page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Giriş Yapın")).click();
+            page.navigate("https://automationexercise.com/");
+            /*page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Giriş Yapın")).click();
             page.getByPlaceholder("Müşteri numaranızı ya da e-posta adresinizi girin").fill("23350412");
             page.getByPlaceholder("Şifrenizi Girin").fill("dssdds");
             page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Giriş Yapın")).click();
-            assertThat(page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Devamkkk"))).isVisible();
+            assertThat(page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Devamkkk"))).isVisible();*/
             try {
                 Thread.sleep(15000);
             } catch (InterruptedException e) {
