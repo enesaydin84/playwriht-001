@@ -19,7 +19,7 @@ public class App
             page.getByPlaceholder("Müşteri numaranızı ya da e-posta adresinizi girin").fill("23350412");
             page.getByPlaceholder("Şifrenizi Girin").fill("dssdds");
             page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Giriş Yapın")).click();
-            assertThat(page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Devam"))).isVisible();
+            assertThat(page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Devamkkk"))).isVisible();
             try {
                 Thread.sleep(15000);
             } catch (InterruptedException e) {
