@@ -5,6 +5,8 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.options.AriaRole;
 
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+
 
 public class App 
 {
@@ -17,11 +19,12 @@ public class App
             page.getByPlaceholder("Müşteri numaranızı ya da e-posta adresinizi girin").fill("23350412");
             page.getByPlaceholder("Şifrenizi Girin").fill("dssdds");
             page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Giriş Yapın")).click();
+            assertThat(page.getByRole(AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Devam"))).isVisible();
             try {
-                Thread.sleep(5000);
+                Thread.sleep(15000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println(page.title());
+
         }
     }}
