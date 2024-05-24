@@ -50,7 +50,7 @@ public class AppTest
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.println("Enes");
+            System.out.println("Enes ve Orhun");
 
         }
     }
